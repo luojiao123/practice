@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>九九乘法表 20170412</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<table border='1'>");
+        for(var i=1;i<10;i++){
+             document.write("<tr>");
+            for (var j=1;j<=i;j++){
+
+                document.write("<td>");
+                document.write(j+"*"+i+"="+i*j);
+                document.write("</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+        document.write("<table border='1' >");
+        for(var i=9;i>=1;i--){
+            document.write("<tr>");
+            for (var j=1;j<=i;j++){
+
+                document.write("<td>");
+                document.write(j+"*"+i+"="+i*j);
+                document.write("</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+
+        document.write("<hr>"+'\n'+'------');
+
+        var str ="sfowjeml";
+        var s=str.indexOf('e',7);
+        var sub = str.substring(4);
+        var sub2 = str.substring(4,6);
+        var toup=str.toUpperCase();
+        var tolo=str.toLowerCase();
+        document.writeln(s+'---indexOf---'+'<br />');
+        document.writeln(sub+'--substring----'+'<br />');
+        document.writeln(sub2+'--substring----'+'<br />');
+        document.writeln(toup+'--toUpperCase----'+'<br />');
+        document.writeln(tolo+'--toLowerCase----'+'<br />');
+
+        var txt="Hello world!"
+        document.write(txt.anchor()+'<br />')
+
+        var arr = [1, 2, 3.14, 'Hello', null, true];
+        arr.length; // 6
+
+        document.write(arr.length+'<br />')
+
+        //注意，直接给Array的length赋一个新的值会导致Array大小的变化：
+
+        var arr = [1, 2, 3]; //定义一个数组
+        arr.length; // 3
+        arr.length = 6; //设置数组的长度为6
+        arr; // arr变为[1, 2, 3, undefined, undefined, undefined]
+        arr.length = 2; //设置数组的长度为2
+        arr; // arr变为[1, 2]
+        //Array可以通过索引把对应的元素修改为新的值，因此，对Array的索引进行赋值会直接修改这个Array：
+        var arr = ['A', 'B', 'C']; //定义一个数组
+        arr[1] = 99; //第一个元素的值为‘99’
+        arr; // arr现在变为['A', 99, 'C']
+        //push()向Array的末尾添加若干元素，pop()则把Array的最后一个元素删除掉：
+        var arr = [1, 2];
+        arr.push('A', 'B'); // 返回Array新的长度: 4
+        arr; // [1, 2, 'A', 'B']
+        arr.pop(); // pop()返回'B'
+        arr; // [1, 2, 'A']
+        arr.pop(); arr.pop(); arr.pop(); // 连续pop 3次
+        arr; // []
+        arr.pop(); // 空数组继续pop不会报错，而是返回undefined
+        arr; // []
+
+        //如果要往Array的头部添加若干元素，使用unshift()方法，shift()方法则把Array的第一个元素删掉：
+        var arr = [1, 2];
+        arr.unshift('A', 'B'); // 返回Array新的长度: 4
+        arr; // ['A', 'B', 1, 2]
+        arr.shift(); // 'A'
+        arr; // ['B', 1, 2]
+        arr.shift(); arr.shift(); arr.shift(); // 连续shift 3次
+        arr; // []
+        arr.shift(); // 空数组继续shift不会报错，而是返回undefined
+        arr; // []
+
+
+    </script>
+</body>
+</html>
